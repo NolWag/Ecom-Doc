@@ -15,17 +15,21 @@ import styled from '@emotion/styled';
  */
 
 const Item = styled('li')`
-    margin: 0rem 2rem;
+    margin: 0 2vw;
 `
 
  
 const FooterNav = () => {
 
   return (
-    <ul style={{position: 'absolute', bottom: '0', listStyleType: 'none', display: 'inline-flex'}}>
-        <Item>Services</Item>
+    <ul style={{listStyleType: 'none', display: 'inline-flex', marginTop: '3vw'}}>
         <Item>FAQs</Item>
         <Item>Contact</Item>
+        <Item>Theme Install</Item>
+        <Item>Theme Edits</Item>
+        <Item>Custom Dev</Item>
+        <Item>Consulting</Item>
+
     </ul>
   )
 }

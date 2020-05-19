@@ -26,7 +26,7 @@ const FlexContainer = styled('div')`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 250px;
+    margin-top: 15vw;
 `
 
 const Footer = () => {
