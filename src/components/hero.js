@@ -3,6 +3,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from '@emotion/styled';
 
+import Button from './button'
+
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
  * images with lazy loading and reduced file sizes. The image is loaded using a
@@ -23,10 +25,10 @@ const Hero = () => {
 
   return (
       <div style={{alignSelf: 'center', marginLeft: '5rem'}}>
-      <h1>Shopify development, <br /> repair and maintenance.</h1>
+      <h1 style={{fontSize: '4vw'}}>Shopify development, <br /> repair and maintenance.</h1>
       <ButtonGroup>
-          <button>Learn More</button>
-          <button>Get Help Now</button>
+          <Button name="Our Services"></Button>
+          <Button type="primary" name="Get Help Now">Get Help Now</Button>
       </ButtonGroup>
       </div>
   )

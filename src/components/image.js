@@ -18,15 +18,15 @@ const Image = () => {
   query {
       image: file(relativePath: { eq: "The-Ecom-Doc.png" }) {
           sharp: childImageSharp {
-              fixed(quality: 100, width: 300) {
-                  ...GatsbyImageSharpFixed_withWebp
+              fluid(quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
               }
           }
       }
   }
 `)
 
-  return <Img style={{position: 'absolute', left: '0', top: '0'}} fixed={image.sharp.fixed} />
+  return <Img style={{width: '20vw', position: 'absolute', left: '0', top: '0'}} fluid={image.sharp.fluid} />
 }
 
 export default Image

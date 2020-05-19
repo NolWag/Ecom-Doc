@@ -22,7 +22,7 @@ const Item = styled('li')`
 const Nav = () => {
 
   return (
-    <ul style={{position: 'absolute', right: '0', listStyleType: 'none', display: 'inlineFlex'}}>
+    <ul style={{position: 'absolute', right: '0', listStyleType: 'none', display: 'inline-flex'}}>
         <Item>Services</Item>
         <Item>FAQs</Item>
         <Item>Contact</Item>
