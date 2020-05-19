@@ -7,6 +7,8 @@ import SEO from "../components/seo"
 
 import Hero from "../components/hero"
 import Nav from "../components/nav"
+import FourUpText from "../components/four-up-text"
+import Footer from "../components/footer"
 
 import Img from "gatsby-image"
 
@@ -14,7 +16,7 @@ import Img from "gatsby-image"
 const IndexPage = () => (
 
 
-  <Layout >
+  <Layout>
     <SEO title="Home" />
     <Nav></Nav>
     <div style={{display: 'flex', justifyContent: 'center', height: '100vh'}}>
@@ -26,7 +28,18 @@ const IndexPage = () => (
     </g>
   </svg>
   <Hero />
-  </div>
+  </div>  
+  <FourUpText />
+
+  <svg style={{ width: '80%', position: 'absolute', left: '0'}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1527 599.31"><defs>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+      <g id="Layer_1-2" data-name="Layer 1">
+          <path style={{fill: '#ef4538'}} class="cls-1" d="M1453.72,195.61a55.87,55.87,0,0,1,13.28,36.3c0,.5,0,1.14,0,2l-.14,4.2.18,1.73V599.31h60v-362a12.62,12.62,0,0,0-.08-1.38c0-1.32.08-2.65.08-4,0-57.58-41.72-105.27-96.16-113.66L0,0V60.2L1423.39,177.84A53,53,0,0,1,1453.72,195.61Z"/>
+      </g>
+  </g>
+  </svg>
+    <Footer />
   </Layout>
 )
 

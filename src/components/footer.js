@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from '@emotion/styled';
 
+import FooterNav from "../components/footer-nav"
 import Button from './button'
 
 /*
@@ -21,17 +22,29 @@ const ButtonGroup = styled('div')`
     width: 100%;
 `
 
-const Hero = () => {
+const FlexContainer = styled('div')`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+`
+
+const Footer = () => {
 
   return (
-      <div style={{alignSelf: 'center', marginLeft: '5rem', zIndex: '10'}}>
-      <h1 style={{fontSize: '4vw'}}>Shopify development, <br /> repair and maintenance.</h1>
+      <div>
+      <FlexContainer>
+      <div style={{zIndex: '10'}}>
+      <h1 style={{fontSize: '2vw'}}>Shopify development, <br /> repair and maintenance.</h1>
       <ButtonGroup>
           <Button name="Our Services" />
           <Button type="primary" name="Get Help Now" />
       </ButtonGroup>
       </div>
+      </FlexContainer>
+      <FooterNav />
+      </div>
   )
 }
 
-export default Hero
+export default Footer

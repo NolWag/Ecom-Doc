@@ -3,8 +3,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from '@emotion/styled';
 
-import Button from './button'
-
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
  * images with lazy loading and reduced file sizes. The image is loaded using a
@@ -16,22 +14,20 @@ import Button from './button'
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const ButtonGroup = styled('div')`
-    display: flex;
-    width: 100%;
+const Item = styled('li')`
+    margin: 0rem 2rem;
 `
 
-const Hero = () => {
+ 
+const FooterNav = () => {
 
   return (
-      <div style={{alignSelf: 'center', marginLeft: '5rem', zIndex: '10'}}>
-      <h1 style={{fontSize: '4vw'}}>Shopify development, <br /> repair and maintenance.</h1>
-      <ButtonGroup>
-          <Button name="Our Services" />
-          <Button type="primary" name="Get Help Now" />
-      </ButtonGroup>
-      </div>
+    <ul style={{position: 'absolute', bottom: '0', listStyleType: 'none', display: 'inline-flex'}}>
+        <Item>Services</Item>
+        <Item>FAQs</Item>
+        <Item>Contact</Item>
+    </ul>
   )
 }
 
-export default Hero
+export default FooterNav

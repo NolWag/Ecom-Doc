@@ -22,13 +22,13 @@ const SecondaryButton = styled('button')`
     color: #000;
     margin-right: 2rem;
     ${ButtonBase}
-    &:hover {
-        background-color: #ffca66;
-        transition: .4s;
-    }
 
     @media (max-width: 800px) {
         margin-right: 0;
+    }
+    &:hover {
+        background-color: #eee;
+        transition: .4s;
     }
 `;
 
@@ -37,7 +37,7 @@ const PrimaryButton = styled('button')`
     color: #fff;
     ${ButtonBase}
     &:hover {
-        background-color: #e0e0e0;
+        background-color: #ef685e;
         transition: .4s;
     }
 `;
