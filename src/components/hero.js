@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import styled from '@emotion/styled';
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -13,20 +14,22 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = () => {
-  const { image } = useStaticQuery(graphql`
-  query {
-      image: file(relativePath: { eq: "The-Ecom-Doc.png" }) {
-          sharp: childImageSharp {
-              fixed(quality: 100, width: 300) {
-                  ...GatsbyImageSharpFixed_withWebp
-              }
-          }
-      }
-  }
-`)
+const ButtonGroup = styled('div')`
+    display: flex;
+    width: 100%;
+`
 
-  return <Img style={{position: 'absolute', left: '0', top: '0'}} fixed={image.sharp.fixed} />
+const Hero = () => {
+
+  return (
+      <div style={{alignSelf: 'center', marginLeft: '5rem'}}>
+      <h1>Shopify development, <br /> repair and maintenance.</h1>
+      <ButtonGroup>
+          <button>Learn More</button>
+          <button>Get Help Now</button>
+      </ButtonGroup>
+      </div>
+  )
 }
 
-export default Image
+export default Hero

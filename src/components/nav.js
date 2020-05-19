@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import styled from '@emotion/styled';
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -13,20 +14,20 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = () => {
-  const { image } = useStaticQuery(graphql`
-  query {
-      image: file(relativePath: { eq: "The-Ecom-Doc.png" }) {
-          sharp: childImageSharp {
-              fixed(quality: 100, width: 300) {
-                  ...GatsbyImageSharpFixed_withWebp
-              }
-          }
-      }
-  }
-`)
+const Item = styled('li')`
+    margin: 7rem 2rem;
+`
 
-  return <Img style={{position: 'absolute', left: '0', top: '0'}} fixed={image.sharp.fixed} />
+ 
+const Nav = () => {
+
+  return (
+    <ul style={{position: 'absolute', right: '0', listStyleType: 'none', display: 'inlineFlex'}}>
+        <Item>Services</Item>
+        <Item>FAQs</Item>
+        <Item>Contact</Item>
+    </ul>
+  )
 }
 
-export default Image
+export default Nav
