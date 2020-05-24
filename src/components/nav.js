@@ -15,27 +15,33 @@ import styled from '@emotion/styled';
  */
 
 const Item = styled('li')`
-    margin: 7rem 2rem;
+    margin: 7vw 2vw;
 `
 const SubMenu = styled('ul')`
     position: absolute;
     top: 180px;
 `
+
+const List = styled('ul')`
+  position: absolute;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  right: 0;
+  list-style-type: none;
+  display: inline-flex;
+`
  
 const Nav = () => {
 
   return (
-    <ul style={{position: 'absolute', right: '0', listStyleType: 'none', display: 'inline-flex'}}>
+    <List>
         <Item>Services</Item>
           <SubMenu>
-            <li>Theme Install</li>
-            <li>Theme Install</li>
-            <li>Theme Install</li>
-            <li>Theme Install</li>
+
           </SubMenu>
         <Item>FAQs</Item>
         <Item>Contact</Item>
-    </ul>
+    </List>
   )
 }
 

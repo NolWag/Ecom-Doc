@@ -15,22 +15,60 @@ import Button from './button'
  * - `gatsby-image`: https://gatsby.dev/gatsby-image
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
+const Container = styled('div')`
+    align-self: center;
+    margin-left: 5rem;
+    z-index: 10;
+
+    @media (max-width: 1200px) {
+        align-self: unset;
+        margin-top: calc(300px - 10vw) ; 
+    }
+    @media (max-width: 900px) {
+        margin-top: calc(220px - 10vw) ; 
+    }    
+    @media (max-width: 800px) {
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+  }
+
+`
+
+const Headline = styled('h1')`
+    font-size: 4vw;
+    font-family: 'Rubik';
+    font-weight: 600;
+
+    @media (max-width: 800px) {
+        text-align: center;
+        font-size: 6vw;
+    }
+`
 
 const ButtonGroup = styled('div')`
     display: flex;
     width: 100%;
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+        align-items: center;
+    }
+`
+const GreenText = styled('span')`
+    color: #96BF48;
 `
 
 const Hero = () => {
 
   return (
-      <div style={{alignSelf: 'center', marginLeft: '5rem', zIndex: '10'}}>
-      <h1 style={{fontSize: '4vw'}}>Shopify development, <br /> repair and maintenance.</h1>
+      <Container>
+      <Headline><GreenText>Shopify</GreenText> development, <br /> repair, and maintenance.</Headline>
       <ButtonGroup>
           <Button name="Our Services" />
           <Button type="primary" name="Get Help Now" />
       </ButtonGroup>
-      </div>
+      </Container>
   )
 }
 

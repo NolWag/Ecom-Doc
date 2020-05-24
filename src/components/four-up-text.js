@@ -23,12 +23,37 @@ const ButtonGroup = styled('div')`
 const FlexContainer = styled('div')`
     display: flex;
     flex-wrap: wrap;
-    padding: 12rem;
+    padding:  6rem 10rem;
+  
+  @media (max-width: 1400px) {
+      padding: 3rem 5rem;
+  }
+
+  @media (max-width: 1000px) {
+      flex-direction: column;
+  }
+
 `
 
 const ContentContainer = styled('div')`
     max-width: 50%;
     padding: 2rem;
+
+    h2 {
+      font-family: 'Rubik';
+      font-weight: 600;
+    }
+
+    p {
+      font-family: 'Rubik';
+      font-weight: 100;
+    }
+
+    @media (max-width: 1000px) {
+      max-width: 100%;
+    }
+
+  
 `
 
 const FourUpText = () => {
