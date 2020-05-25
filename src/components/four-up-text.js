@@ -23,7 +23,7 @@ const ButtonGroup = styled('div')`
 const FlexContainer = styled('div')`
     display: flex;
     flex-wrap: wrap;
-    padding:  6rem 10rem;
+    padding:  4rem 10rem;
   
   @media (max-width: 1400px) {
       padding: 3rem 5rem;
@@ -31,6 +31,10 @@ const FlexContainer = styled('div')`
 
   @media (max-width: 1000px) {
       flex-direction: column;
+  }
+
+  @media (max-width: 800px) {
+    padding: 0;
   }
 
 `
@@ -52,13 +56,28 @@ const ContentContainer = styled('div')`
     @media (max-width: 1000px) {
       max-width: 100%;
     }
-
-  
 `
+
+const Headline = styled('h2')`
+  text-align: center;
+  font-size: 2rem;
+  padding: 0 2rem;
+
+  @media (max-width: 600px) {
+    text-align: left;
+  }
+`
+
+
+
 
 const FourUpText = () => {
 
   return (
+      <div style={{minHeight: '100vh'}}>
+      <div style={{ marginTop: '10rem'}}>
+      <Headline>Most Popular Services</Headline>
+      </div>
       <FlexContainer>
           <ContentContainer>
               <h2>Theme Installation</h2>
@@ -93,6 +112,7 @@ const FourUpText = () => {
                 <Button type="primary" name="Learn More"></Button>
           </ContentContainer>
         </FlexContainer>
+      </div>
   )
 }
 

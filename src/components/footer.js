@@ -21,29 +21,59 @@ const ButtonGroup = styled('div')`
     display: flex;
     width: 100%;
 `
+const Container = styled('div')`
+    min-height: unset;
+
+
+    @media (max-width: 800px) {
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+`
 
 const FlexContainer = styled('div')`
     display: flex;
-    justify-content: center;
     align-items: center;
     margin-top: 15vw;
+    margin-left: 8vw;
+
+    @media (max-width: 800px) {
+        flex-direction: column-reverse;
+        margin-top: 0;
+        margin-bottom: 4rem;
+        align-items: center;
+        margin-left: 0;
+    }
 `
+
+const GreenText = styled('span')`
+    color: #96BF48;
+`
+const Headline = styled('h3')`
+    font-size: 3vw;
+    margin-left: 2rem;
+
+    @media (max-width: 800px) {
+        font-size: 6vw;
+        text-align: left;
+        margin-left: 0;
+    }
+`
+
+
 
 const Footer = () => {
 
   return (
-      <div>
+      <Container>
       <FlexContainer>
-      <div style={{zIndex: '10'}}>
-      <h1 style={{fontSize: '2vw'}}>Shopify development, <br /> repair and maintenance.</h1>
-      <ButtonGroup>
-          <Button name="Our Services" />
-          <Button type="primary" name="Get Help Now" />
-      </ButtonGroup>
-      </div>
+      <Button type="primary" name="Get Help Now" />
+      <Headline><GreenText>Shopify</GreenText> development, <br /> repair and maintenance.</Headline>
       </FlexContainer>
       <FooterNav />
-      </div>
+      </Container>
   )
 }
 

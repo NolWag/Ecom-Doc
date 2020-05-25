@@ -14,23 +14,84 @@ import styled from '@emotion/styled';
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Item = styled('li')`
-    margin: 0 2vw;
+const FixedContainer = styled('div')`
+  position: static;
+  width: 100%;
+
+  @media (max-width: 800px) {
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    background-color: #ef4538;
+  }
 `
 
+const List = styled('ul')`
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+`
+
+const Item = styled('li')`
+    font-family: 'Rubik';
+    
+    @media (max-width: 800px) {
+      color: #fff;
+      padding: 0 1rem;
+      height: 100%;
+
+      &:hover {
+      color: #ccc;
+      transition: .2s;
+      }
+    }
+`
+
+
+
+const SubMenu = styled('ul')`
+    list-style-type: none;
+    background-color: #ccc;
+    margin: 0;
+    padding-top: 1rem;
+    flex-wrap: wrap;
+    padding-bottom: .5rem;
+    display: none;
+`
+
+const Item2 = styled('li')`
+  margin: 1rem;
+  color: #000;
+  font-family: 'Rubik';
+
+  &:hover {
+      color: #fff;
+      transition: .2s;
+  }
+`
+
+function openSubMenu() {
+  SubMenu.style.display = 'block';
+}
  
 const FooterNav = () => {
 
   return (
-    <ul style={{listStyleType: 'none', display: 'inline-flex', marginTop: '3vw'}}>
+    <FixedContainer>
+    <SubMenu>
+        <Item2>Theme Installation</Item2>
+        <Item2>Theme Edits</Item2>
+        <Item2>Custom Development</Item2>
+        <Item2>Consulting</Item2>
+    </SubMenu>
+    <List>
+        <Item onClick={openSubMenu}>Services</Item>
         <Item>FAQs</Item>
         <Item>Contact</Item>
-        <Item>Theme Install</Item>
-        <Item>Theme Edits</Item>
-        <Item>Custom Dev</Item>
-        <Item>Consulting</Item>
-
-    </ul>
+    </List>
+    </FixedContainer>
   )
 }
 

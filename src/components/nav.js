@@ -14,26 +14,71 @@ import styled from '@emotion/styled';
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
+const AbsoluteContainer = styled('div')`
+  width: 100%;
+  position: absolute;
+`
+
+const FlexContainer = styled('div')`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    justify-content: unset;
+  }
+`
+
+const List = styled('ul')`
+  font-family: 'Montserrat';
+  font-weight: 600;
+  list-style-type: none;
+  display: inline-flex;
+
+  @media (max-width: 800px) {
+    display: none;
+  }
+`
+
 const Item = styled('li')`
     margin: 7vw 2vw;
 `
+
 const SubMenu = styled('ul')`
     position: absolute;
     top: 180px;
 `
 
-const List = styled('ul')`
-  position: absolute;
-  font-family: 'Montserrat';
-  font-weight: 600;
-  right: 0;
-  list-style-type: none;
-  display: inline-flex;
+
+const Logo = styled(Img)`
+  width: 20vw;
+
+  @media (max-width: 800px) {
+    width: 80%;
+    align-self: center;
+  }
 `
  
 const Nav = () => {
 
+  const { image } = useStaticQuery(graphql`
+  query {
+      image: file(relativePath: { eq: "The-Ecom-Doc.png" }) {
+          sharp: childImageSharp {
+              fluid(quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+              }
+          }
+      }
+  }
+`)
+
+
   return (
+    <AbsoluteContainer>
+    <FlexContainer>
+    <Logo fluid={image.sharp.fluid} />
     <List>
         <Item>Services</Item>
           <SubMenu>
@@ -42,6 +87,8 @@ const Nav = () => {
         <Item>FAQs</Item>
         <Item>Contact</Item>
     </List>
+    </FlexContainer>
+    </AbsoluteContainer>
   )
 }
 
