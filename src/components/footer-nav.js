@@ -27,15 +27,20 @@ const FixedContainer = styled('div')`
 `
 
 const List = styled('ul')`
-  list-style-type: none;
-  margin-bottom: 0;
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
+  display: none;
+
+  @media (max-width: 800px) {
+    margin-bottom: .8rem;
+    margin-top: 1rem;
+    justify-content: center;
+    display: flex;
+    list-style-type: none;
+  }
 `
 
-const Item = styled('li')`
+const Item = styled(Link)`
     font-family: 'Rubik';
+    padding: 0 1vw;
     
     @media (max-width: 800px) {
       color: #fff;
@@ -78,14 +83,39 @@ const Item2 = styled(Link)`
 const NavServices = () => {
   return (
     <div>
-        <SubMenu>
-        <Item2>Theme Installation</Item2>
-        <Item2>Theme Edits</Item2>
-        <Item2>Custom Development</Item2>
-        <Item2>Consulting</Item2>
+    <SubMenu>
+        <Item2 to="/theme-installation">Theme Installation</Item2>
+        <Item2 to="/theme-edits">Theme Edits</Item2>
+        <Item2 to="/custom-development">Custom Development</Item2>
+        <Item2 to="/consulting">Consulting</Item2>
     </SubMenu>
    
     </div>
+  )
+}
+
+const DeskNav = styled('ul')`
+    display: flex;
+    bottom: 0; 
+    list-style-type: none;
+    margin-top: 4rem;
+    font-size: .8rem;
+
+  @media (max-width: 800px) {
+    display: none;
+  }
+`
+
+const DeskTopNav = () => {
+  return (
+    <DeskNav>
+      <Item to="/theme-installation">Theme Install</Item>
+      <Item to="/theme-edits">Theme Edits</Item>
+      <Item to="/custom-development">Custom Dev</Item>
+      <Item to="/consulting">Consulting</Item>
+      <Item to="/faqs">FAQs</Item>
+      <Item to="/contact">Contact</Item>
+    </DeskNav>
   )
 }
 
@@ -105,8 +135,8 @@ class Foo extends React.Component {
               }
               <List>
                 <Item onClick={() => this.setState({ showing: !showing })}>Services</Item>
-                <Item>FAQs</Item>
-                <Item>Contact</Item>
+                <Item to="/faqs">FAQs</Item>
+                <Item to="/contact">Contact</Item>
               </List>
           </div>  
       )
@@ -119,6 +149,7 @@ const FooterNav = () => {
   return (
     <FixedContainer>
       <Foo />
+      <DeskTopNav />
     </FixedContainer>
   )
 }
