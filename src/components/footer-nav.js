@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from '@emotion/styled';
 
@@ -55,18 +55,22 @@ const SubMenu = styled('ul')`
     list-style-type: none;
     background-color: #ccc;
     margin: 0;
-    padding-top: 1rem;
-    flex-wrap: wrap;
-    padding-bottom: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 `
 
-const Item2 = styled('li')`
-  margin: 1rem;
+const Item2 = styled(Link)`
+  margin: 0rem;
   color: #000;
   font-family: 'Rubik';
+  height: 100%;
+  width: 100%;
+  padding: .5rem 2rem;
+  border: .5px solid #eee;
 
   &:hover {
-      color: #fff;
+      background-color: #fff;
       transition: .2s;
   }
 `
@@ -87,7 +91,7 @@ const NavServices = () => {
 
 class Foo extends React.Component {
 
-  state = { showing: true };
+  state = { showing: false };
 
   render() {
       const { showing } = this.state;
