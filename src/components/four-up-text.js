@@ -93,7 +93,7 @@ const FourUpText = () => {
                 elit, sed diam nonummy nibh euismod tincidunt ut
                 laoreet dolore magna aliquam erat volutpat. Ut wisi
                 enim ad minim veniam.</p>
-                <Button type="primary" name="Learn More"></Button>
+                <Button name="Learn More"></Button>
           </ContentContainer>
           <ContentContainer>
               <h2>Theme Changes & Edits</h2>
@@ -109,7 +109,7 @@ const FourUpText = () => {
                 elit, sed diam nonummy nibh euismod tincidunt ut
                 laoreet dolore magna aliquam erat volutpat. Ut wisi
                 enim ad minim veniam.</p>
-                <Button type="primary" name="Learn More"></Button>
+                <Button name="Learn More"></Button>
           </ContentContainer>
         </FlexContainer>
       </div>

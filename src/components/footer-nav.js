@@ -73,7 +73,6 @@ const Item2 = styled('li')`
 `
 
 function openSubMenu() {
-  SubMenu.style.display = 'block';
 }
  
 const FooterNav = () => {
