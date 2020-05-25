@@ -35,6 +35,8 @@ const BottomLine = styled('svg')`
   width: 80%;
   position: absolute;
   left: 0;
+  z-index: -10;
+
 
   @media (max-width: 800px) {
     display: none;

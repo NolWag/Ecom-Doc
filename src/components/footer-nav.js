@@ -58,7 +58,6 @@ const SubMenu = styled('ul')`
     padding-top: 1rem;
     flex-wrap: wrap;
     padding-bottom: .5rem;
-    display: none;
 `
 
 const Item2 = styled('li')`
@@ -72,24 +71,50 @@ const Item2 = styled('li')`
   }
 `
 
-function openSubMenu() {
-}
- 
-const FooterNav = () => {
-
+const NavServices = () => {
   return (
-    <FixedContainer>
-    <SubMenu>
+    <div>
+        <SubMenu>
         <Item2>Theme Installation</Item2>
         <Item2>Theme Edits</Item2>
         <Item2>Custom Development</Item2>
         <Item2>Consulting</Item2>
     </SubMenu>
-    <List>
-        <Item onClick={openSubMenu}>Services</Item>
-        <Item>FAQs</Item>
-        <Item>Contact</Item>
-    </List>
+   
+    </div>
+  )
+}
+
+class Foo extends React.Component {
+
+  state = { showing: true };
+
+  render() {
+      const { showing } = this.state;
+      
+      return (
+          <div>
+              { showing ?
+                <NavServices />
+                :
+                null
+              }
+              <List>
+                <Item onClick={() => this.setState({ showing: !showing })}>Services</Item>
+                <Item>FAQs</Item>
+                <Item>Contact</Item>
+              </List>
+          </div>  
+      )
+    }
+}
+
+
+const FooterNav = () => {
+
+  return (
+    <FixedContainer>
+      <Foo />
     </FixedContainer>
   )
 }

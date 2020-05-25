@@ -17,10 +17,6 @@ import Button from './button'
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const ButtonGroup = styled('div')`
-    display: flex;
-    width: 100%;
-`
 const Container = styled('div')`
     min-height: unset;
 
@@ -38,6 +34,7 @@ const FlexContainer = styled('div')`
     align-items: center;
     margin-top: 15vw;
     margin-left: 8vw;
+    z-index: 10;
 
     @media (max-width: 800px) {
         flex-direction: column-reverse;
