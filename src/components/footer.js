@@ -66,7 +66,7 @@ const Footer = () => {
   return (
       <Container>
       <FlexContainer>
-      <Button type="primary" name="Get Help Now" />
+      <Button type="primary" name="Get Help Now" link="/contact" />
       <Headline><GreenText>Shopify</GreenText> development, <br /> repair and maintenance.</Headline>
       </FlexContainer>
       <FooterNav />

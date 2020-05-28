@@ -53,6 +53,22 @@ const Item = styled(Link)`
       }
     }
 `
+const ItemNoLink = styled('div')`
+    font-family: 'Rubik';
+    padding: 0 1vw;
+    cursor: pointer;
+    
+    @media (max-width: 800px) {
+      color: #fff;
+      padding: 0 1rem;
+      height: 100%;
+
+      &:hover {
+      color: #ccc;
+      transition: .2s;
+      }
+    }
+`
 
 
 
@@ -134,7 +150,7 @@ class Foo extends React.Component {
                 null
               }
               <List>
-                <Item onClick={() => this.setState({ showing: !showing })}>Services</Item>
+                <ItemNoLink onClick={() => this.setState({ showing: !showing })}>Services</ItemNoLink>
                 <Item to="/faqs">FAQs</Item>
                 <Item to="/contact">Contact</Item>
               </List>

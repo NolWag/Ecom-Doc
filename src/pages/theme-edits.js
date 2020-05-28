@@ -3,12 +3,12 @@ import Nav from "../components/nav"
 import InnerHero from "../components/InnerHero"
 import FooterNav from "../components/footer-nav"
 
-const ContactPage = () => {
+const ThemeChangesPage = () => {
     
     return (
         <div>
             <Nav />
-            <InnerHero pageName="Contact" />
+            <InnerHero pageName="Theme Edits & Changes" />
             <FooterNav />
 
         </div>
@@ -16,4 +16,4 @@ const ContactPage = () => {
 
 }
 
-export default ContactPage
+export default ThemeChangesPage

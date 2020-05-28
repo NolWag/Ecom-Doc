@@ -78,7 +78,7 @@ const Nav = () => {
   return (
     <AbsoluteContainer>
     <FlexContainer>
-    <Logo fluid={image.sharp.fluid} />
+    <Link to="/"><Logo fluid={image.sharp.fluid} /> </Link>
     <List>
         <Item>Services</Item>
           <SubMenu>

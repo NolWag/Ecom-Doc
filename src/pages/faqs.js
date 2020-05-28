@@ -3,17 +3,16 @@ import Nav from "../components/nav"
 import InnerHero from "../components/InnerHero"
 import FooterNav from "../components/footer-nav"
 
-const ContactPage = () => {
+const FAQPage = () => {
     
     return (
         <div>
             <Nav />
-            <InnerHero pageName="Contact" />
+            <InnerHero pageName="FAQs" />
             <FooterNav />
-
         </div>
     )
 
 }
 
-export default ContactPage
+export default FAQPage
