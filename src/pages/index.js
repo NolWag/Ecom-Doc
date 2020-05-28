@@ -25,6 +25,7 @@ const TopLine = styled('svg')`
   width: 80%;
   position: absolute;
   right: 0;
+  z-index: -10;
 
   @media (max-width: 800px) {
     display: none;

@@ -81,35 +81,31 @@ const FourUpText = () => {
       <FlexContainer>
           <ContentContainer>
               <h2>Theme Installation</h2>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
-                elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi
-                enim ad minim veniam.</p>
-                <Button type="primary" name="Learn More"></Button>
+              <p>
+              Purchase a new theme, but it doesn’t look exactly like it’s supposed to? We’ve installed and set up 100’s of the most popular Shopify themes. Whether it’s the config settings or product variations we can get your Shopify store looking the way you want it to.
+              </p>
+                <Button type="primary" name="Learn More" link="/theme-installation"></Button>
           </ContentContainer>
           <ContentContainer>
               <h2>Custom Development</h2>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
-                elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi
-                enim ad minim veniam.</p>
-                <Button name="Learn More"></Button>
+              <p>
+              We love building new themes! Have a discussion with our designers to create the perfect ecommerce experience for your customers. Our team has years of experience building Shopify stores from scratch, creating the perfect management platform for your employees and best ecommerce experience for your customers.
+              </p>
+                <Button name="Learn More" link="custom-development"></Button>
           </ContentContainer>
           <ContentContainer>
               <h2>Theme Changes & Edits</h2>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
-                elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi
-                enim ad minim veniam.</p>
-                <Button type="primary" name="Learn More"></Button>
+              <p>
+              Our most popular service by far, changes and edits to your existing Shopify theme come in all shapes and sizes. We can perform changes as small as color changes and as big as complete landing page development. All we need is a short description of the changes to your Shopify store to get started!
+              </p>
+                <Button type="primary" name="Learn More" link="/theme-changes"></Button>
           </ContentContainer>
           <ContentContainer>
               <h2>Consulting</h2>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
-                elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi
-                enim ad minim veniam.</p>
-                <Button name="Learn More"></Button>
+              <p>
+              Just getting started in ecommerce or transferring to Shopify from another platform? With over 5 years experience working with hundreds of Shopify stores and Shopify clients our consultant services are the best in the industry.
+              </p>
+                <Button name="Learn More" link="/consulting"></Button>
           </ContentContainer>
         </FlexContainer>
       </div>

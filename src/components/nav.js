@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from '@emotion/styled';
 
@@ -41,7 +41,7 @@ const List = styled('ul')`
   }
 `
 
-const Item = styled('li')`
+const Item = styled(Link)`
     margin: 7vw 2vw;
 `
 
@@ -59,7 +59,7 @@ const Logo = styled(Img)`
     align-self: center;
   }
 `
- 
+
 const Nav = () => {
 
   const { image } = useStaticQuery(graphql`
@@ -84,8 +84,8 @@ const Nav = () => {
           <SubMenu>
 
           </SubMenu>
-        <Item>FAQs</Item>
-        <Item>Contact</Item>
+        <Item to="/faqs">FAQs</Item>
+        <Item to="/contact">Contact</Item>
     </List>
     </FlexContainer>
     </AbsoluteContainer>
