@@ -2,6 +2,7 @@ import React from "react"
 import Nav from "../components/nav"
 import InnerHero from "../components/InnerHero"
 import FooterNav from "../components/footer-nav"
+import ContactForm from "../components/contact-form"
 
 const ContactPage = () => {
     
@@ -9,6 +10,7 @@ const ContactPage = () => {
         <div>
             <Nav />
             <InnerHero pageName="Contact" />
+            <ContactForm />
             <FooterNav />
 
         </div>

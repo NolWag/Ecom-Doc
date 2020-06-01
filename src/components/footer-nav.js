@@ -101,9 +101,9 @@ const NavServices = () => {
     <div>
     <SubMenu>
         <Item2 to="/theme-installation">Theme Installation</Item2>
-        <Item2 to="/theme-edits">Theme Edits</Item2>
+        <Item2 to="/theme-changes">Theme Edits</Item2>
         <Item2 to="/custom-development">Custom Development</Item2>
-        <Item2 to="/consulting">Consulting</Item2>
+        <Item2 to="/">Consulting</Item2>
     </SubMenu>
    
     </div>
@@ -126,9 +126,9 @@ const DeskTopNav = () => {
   return (
     <DeskNav>
       <Item to="/theme-installation">Theme Install</Item>
-      <Item to="/theme-edits">Theme Edits</Item>
+      <Item to="/theme-changes">Theme Edits</Item>
       <Item to="/custom-development">Custom Dev</Item>
-      <Item to="/consulting">Consulting</Item>
+      <Item to="/">Consulting</Item>
       <Item to="/faqs">FAQs</Item>
       <Item to="/contact">Contact</Item>
     </DeskNav>
