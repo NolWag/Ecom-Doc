@@ -76,7 +76,7 @@ const FourUpText = () => {
   return (
       <div style={{minHeight: '100vh'}}>
       <div style={{ marginTop: '10rem'}}>
-      <Headline>Most Popular Services</Headline>
+      <Headline id="services">Most Popular Services</Headline>
       </div>
       <FlexContainer>
           <ContentContainer>
@@ -105,7 +105,7 @@ const FourUpText = () => {
               <p>
               Just getting started in ecommerce or transferring to Shopify from another platform? With over 5 years experience working with hundreds of Shopify stores and Shopify clients our consultant services are the best in the industry.
               </p>
-                <Button name="Learn More" link="/consulting"></Button>
+                <Button name="Learn More" link="/"></Button>
           </ContentContainer>
         </FlexContainer>
       </div>

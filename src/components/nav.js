@@ -45,6 +45,11 @@ const Item = styled(Link)`
     margin: 7vw 2vw;
 `
 
+const ItemLink = styled('a')`
+    margin: 7vw 2vw;
+`
+
+
 const SubMenu = styled('ul')`
     position: absolute;
     top: 180px;
@@ -80,7 +85,7 @@ const Nav = () => {
     <FlexContainer>
     <Link to="/"><Logo fluid={image.sharp.fluid} /> </Link>
     <List>
-        <Item>Services</Item>
+        <ItemLink href="#services">Services</ItemLink>
           <SubMenu>
 
           </SubMenu>
