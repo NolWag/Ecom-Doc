@@ -65,8 +65,8 @@ const Hero = () => {
       <Container>
       <Headline><GreenText>Shopify</GreenText> development, <br /> repair, and maintenance.</Headline>
       <ButtonGroup>
-          <Button name="Our Services" />
-          <Button type="primary" name="Get Help Now" />
+            <Button name="FAQs" link="/faqs" />
+          <Button type="primary" name="Get Help Now" link="/contact" />
       </ButtonGroup>
       </Container>
   )
