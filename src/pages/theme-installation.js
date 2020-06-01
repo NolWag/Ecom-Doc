@@ -52,7 +52,7 @@ const ThemeInstallationPage = () => {
             <p>
             Below is a guide, from Shopify, on adding a new theme to your store. Let us know if you have any issues and we’d be glad to get them corrected for you.
             </p>
-            <a href="https://help.shopify.com/en/manual/using-themes/adding-themes" target="_blank">
+            <a href="https://help.shopify.com/en/manual/using-themes/adding-themes" target="_blank" rel="noreferrer">
             <ButtonOut>Adding Themes</ButtonOut>
             </a>
             </Content>

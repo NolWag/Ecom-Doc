@@ -57,11 +57,15 @@ const SubMenu = styled('ul')`
 
 
 const Logo = styled(Img)`
-  width: 20vw;
+  width: 15vw;
+  margin: 2rem;
 
   @media (max-width: 800px) {
-    width: 80%;
+    width: 80vw;
     align-self: center;
+    z-index: 10;
+    margin: 0;
+    margin-top: 5rem;
   }
 `
 
@@ -69,7 +73,7 @@ const Nav = () => {
 
   const { image } = useStaticQuery(graphql`
   query {
-      image: file(relativePath: { eq: "The-Ecom-Doc.png" }) {
+      image: file(relativePath: { eq: "Ecom-Doc-Logo-Web.jpg" }) {
           sharp: childImageSharp {
               fluid(quality: 100) {
                   ...GatsbyImageSharpFluid_withWebp
