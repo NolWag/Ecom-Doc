@@ -19,11 +19,15 @@ const Title = styled('h1')`
     font-family: 'Rubik';
     font-weight: 600;
 
+    @media (max-width: 800px) {
+        font-size: 7vw;
+    }
+
 `
 
 const Line = styled('div')`
     height: 50px;
-    background-color: red;
+    background-color: #ef4538;
     width: 100%;
 `
 
