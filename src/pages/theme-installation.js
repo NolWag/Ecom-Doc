@@ -3,6 +3,7 @@ import Nav from "../components/nav"
 import InnerHero from "../components/InnerHero"
 import FooterNav from "../components/footer-nav"
 import Button from "../components/button"
+import SEO from "../components/seo"
 
 import styled from '@emotion/styled-base';
 
@@ -39,6 +40,7 @@ const ThemeInstallationPage = () => {
     
     return (
         <div>
+            <SEO title="Theme Installation" />
             <Nav />
             <InnerHero pageName="Theme Installation" />
             <Content>

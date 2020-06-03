@@ -2,6 +2,7 @@ import React from "react"
 import Nav from "../components/nav"
 import InnerHero from "../components/InnerHero"
 import FooterNav from "../components/footer-nav"
+import SEO from "../components/seo"
 
 import { Link } from "gatsby"
 import styled from '@emotion/styled-base';
@@ -18,6 +19,7 @@ const FAQPage = () => {
     
     return (
         <div>
+            <SEO title="Frequently Asked Questions" />
             <Nav />
             <InnerHero pageName="FAQs" />
             <Content>

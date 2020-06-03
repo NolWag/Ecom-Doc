@@ -2,6 +2,7 @@ import React from "react"
 import Nav from "../components/nav"
 import InnerHero from "../components/InnerHero"
 import FooterNav from "../components/footer-nav"
+import SEO from "../components/seo"
 
 import styled from '@emotion/styled-base';
 
@@ -17,8 +18,9 @@ const CustomDevelopmentPage = () => {
     
     return (
         <div>
+            <SEO title="Custom Theme Development" />
             <Nav />
-            <InnerHero pageName="Custom Development" />
+            <InnerHero pageName="Custom Theme Development" />
             <Content>
             <h2>New Shopify Store</h2>
               <p>

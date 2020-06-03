@@ -2,6 +2,7 @@ import React from "react"
 import Nav from "../components/nav"
 import InnerHero from "../components/InnerHero"
 import FooterNav from "../components/footer-nav"
+import SEO from "../components/seo"
 
 import styled from '@emotion/styled-base';
 
@@ -17,6 +18,7 @@ const ThemeChangesPage = () => {
     
     return (
         <div>
+            <SEO title="Theme Edits & Changes" />
             <Nav />
             <InnerHero pageName="Theme Edits & Changes" />
 
