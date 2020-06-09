@@ -2,9 +2,24 @@ module.exports = {
   siteMetadata: {
     title: `The Ecom Doc - Shopify Development, Repair, & Maintenace Service`,
     description: `Let The Ecom Doc recitate your Shopify store today! Theme installion, Theme changes or edits, Custom theme development and more.`,
-    author: `@gatsbyjs`,
+    author: `@nolwag`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: {
+          default: require.resolve("./src/components/blog-layout.js"),
+        },
+      },
+    },
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     {
@@ -19,7 +34,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `The-Ecom-Doc`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
