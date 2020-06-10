@@ -1,5 +1,5 @@
 import React from "react"
-import Nav from "../components/nav"
+import InternalNav from "../components/internal-nav"
 import InnerHero from "../components/InnerHero"
 import FooterNav from "../components/footer-nav"
 import Button from "../components/button"
@@ -41,7 +41,7 @@ const ThemeInstallationPage = () => {
     return (
         <div>
             <SEO title="Theme Installation" />
-            <Nav />
+            <InternalNav />
             <InnerHero pageName="Theme Installation" />
             <Content>
             <h2>Shopify Themes</h2>

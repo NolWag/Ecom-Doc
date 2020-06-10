@@ -1,5 +1,5 @@
 import React from "react"
-import Nav from "../components/nav"
+import InternalNav from "../components/internal-nav"
 import InnerHero from "../components/InnerHero"
 import FooterNav from "../components/footer-nav"
 import SEO from "../components/seo"
@@ -19,7 +19,7 @@ const CustomDevelopmentPage = () => {
     return (
         <div>
             <SEO title="Custom Theme Development" />
-            <Nav />
+            <InternalNav />
             <InnerHero pageName="Custom Theme Development" />
             <Content>
             <h2>New Shopify Store</h2>

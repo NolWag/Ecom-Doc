@@ -9,7 +9,6 @@ const FlexContainer = styled('div')`
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 60vh;
     flex-direction: column;
 `
 

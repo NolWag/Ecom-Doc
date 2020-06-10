@@ -1,5 +1,32 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import styled from '@emotion/styled';
+
+import InternalNav from "../components/internal-nav"
+import Button from "../components/button"
+import InnerHero from "../components/InnerHero"
+import SEO from "../components/seo"
+
+const PostItem = styled('div')`
+    margin: 4rem 30%;
+    border: solid #ef4538 5px;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    @media (max-width: 800px) {
+       margin: 4rem 1rem;
+   }
+
+`
+const Title = styled('h2')`
+`
+const Header = styled('div')`
+`
+
+const Flex = styled('div')`
+    display: flex;
+    justify-content: space-between;
+`
 
 function BlogPage({ data }) {
     const { edges: posts } = data.allMdx
@@ -8,14 +35,22 @@ function BlogPage({ data }) {
         {posts.map(({ node }) => {
           const { title, author } = node.frontmatter
           return (
-            <div key={node.id}>
-              <header>
-                <div>{title}</div>
-                <div>Posting By {author}</div>
-              </header>
+            <div>
+            <SEO title="Blog" />
+            <InternalNav />
+            <InnerHero pageName="Blog" />
+            <Link to={node.fields.slug}>
+            <PostItem key={node.id}>
+              <Header>
+                <Title>{title}</Title>
+              </Header>
               <p>{node.excerpt}</p>
-              <Link to={node.fields.slug}>View Article</Link>
-              <hr />
+              <Flex>
+              <div>Posted By {author}</div>
+              <Button type="primary" name="Read Post" link={node.fields.slug} />
+              </Flex>
+            </PostItem>
+            </Link>
             </div>
           )
         })}
