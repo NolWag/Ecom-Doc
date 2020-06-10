@@ -1,5 +1,5 @@
 import React from "react"
-import Nav from "../components/nav"
+import InternalNav from "../components/internal-nav"
 import InnerHero from "../components/InnerHero"
 import FooterNav from "../components/footer-nav"
 import SEO from "../components/seo"
@@ -20,7 +20,7 @@ const FAQPage = () => {
     return (
         <div>
             <SEO title="Frequently Asked Questions" />
-            <Nav />
+            <InternalNav />
             <InnerHero pageName="FAQs" />
             <Content>
                 <h4>What is your hourly rate?</h4>
