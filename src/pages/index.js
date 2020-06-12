@@ -8,9 +8,11 @@ import Hero from "../components/hero"
 import Nav from "../components/nav"
 import FourUpText from "../components/four-up-text"
 import Footer from "../components/footer"
+import Carousel from "../components/carousel"
 
 import Img from "gatsby-image"
 import styled from '@emotion/styled';
+import CarouselHome from "../components/carousel";
 
 const HeroContainer = styled('div')`
   display: flex;
@@ -62,7 +64,6 @@ const IndexPage = () => (
   <HeroContainer>
     <Hero />
   </HeroContainer>  
-  
   <FourUpText />
   
   <BottomLine xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1527 599.31"><defs>
