@@ -6,11 +6,10 @@ import { Link } from "gatsby"
 
 const ButtonBase = css`
     border: none;
-    height: 2.5rem;
+    min-height: 2.5rem;
     border-radius: 2rem;
     cursor: pointer;
-    font-family: 'Montserrat';
-    font-weight: 600;
+    font-family: 'rubik';
     padding: .5rem 2rem;
 
     @media (max-width: 800px) {

@@ -1,7 +1,6 @@
 import React from "react"
 import InternalNav from "../components/internal-nav"
 import InnerHero from "../components/InnerHero"
-import FooterNav from "../components/footer-nav"
 import SEO from "../components/seo"
 
 import styled from '@emotion/styled-base';
@@ -33,7 +32,6 @@ const CustomDevelopmentPage = () => {
             <p>Not ready to completely dive into a full sized store? We have just the thing! Our single page Shopify store is great for businesses just getting started in ecommerce or wanting to test out the viability of a new product without a huge initial investment. </p>
             <p>A one page store is typically a single product (but not necessarily limited to) and a buy button. This allows us to offer a very affordable price and if you decide to grow, you can use the same Shopify store you’ve been using, no need to redevelop! </p>
             </Content>
-            <FooterNav />
 
         </div>
     )

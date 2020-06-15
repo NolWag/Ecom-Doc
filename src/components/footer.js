@@ -3,8 +3,9 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from '@emotion/styled';
 
-import FooterNav from "../components/footer-nav"
+import FooterNav from "./_footer-nav"
 import Button from './button'
+import MobileNav from "../components/mobile-nav"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -69,7 +70,7 @@ const Footer = () => {
       <Button type="primary" name="Get Help Now" link="/contact" />
       <Headline><GreenText>Shopify</GreenText> development, <br /> repair and maintenance.</Headline>
       </FlexContainer>
-      <FooterNav />
+      <MobileNav />
       </Container>
   )
 }

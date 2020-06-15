@@ -1,7 +1,6 @@
 import React from "react"
 import InternalNav from "../components/internal-nav"
 import InnerHero from "../components/InnerHero"
-import FooterNav from "../components/footer-nav"
 import Button from "../components/button"
 import SEO from "../components/seo"
 
@@ -58,7 +57,6 @@ const ThemeInstallationPage = () => {
             <ButtonOut>Adding Themes</ButtonOut>
             </a>
             </Content>
-            <FooterNav />
 
         </div>
     )

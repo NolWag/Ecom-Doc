@@ -70,8 +70,6 @@ const ItemNoLink = styled('div')`
     }
 `
 
-
-
 const SubMenu = styled('ul')`
     list-style-type: none;
     background-color: #ccc;
