@@ -80,32 +80,32 @@ const FourUpText = () => {
       </div>
       <FlexContainer>
           <ContentContainer>
-              <h2>Theme Installation</h2>
+              <h2>Page Speed Optimization</h2>
               <p>
               Purchase a new theme, but it doesn’t look exactly like it’s supposed to? We’ve installed and set up 100’s of the most popular Shopify themes. Whether it’s the config settings or product variations we can get your Shopify store looking the way you want it to.
               </p>
-                <Button type="primary" name="Learn More" link="/theme-installation"></Button>
+                <Button type="primary" name="Inquire Now" link="/contact"></Button>
           </ContentContainer>
           <ContentContainer>
-              <h2>Custom Development</h2>
+              <h2>Theme Design & Development</h2>
               <p>
               We love building new themes! Have a discussion with our designers to create the perfect ecommerce experience for your customers. Our team has years of experience building Shopify stores from scratch, creating the perfect management platform for your employees and best ecommerce experience for your customers.
               </p>
-                <Button name="Learn More" link="custom-development"></Button>
+                <Button name="Inquire Now" link="/contact"></Button>
           </ContentContainer>
           <ContentContainer>
               <h2>Theme Changes & Edits</h2>
               <p>
               Our most popular service by far, changes and edits to your existing Shopify theme come in all shapes and sizes. We can perform changes as small as color changes and as big as complete landing page development. All we need is a short description of the changes to your Shopify store to get started!
               </p>
-                <Button type="primary" name="Learn More" link="/theme-changes"></Button>
+                <Button type="primary" name="Inquire Now" link="/contact"></Button>
           </ContentContainer>
           <ContentContainer>
               <h2>Consulting</h2>
               <p>
               Just getting started in ecommerce or transferring to Shopify from another platform? With over 5 years experience working with hundreds of Shopify stores and Shopify clients our consultant services are the best in the industry.
               </p>
-                <Button name="Learn More" link="/"></Button>
+                <Button name="Inquire Now" link="/contact"></Button>
           </ContentContainer>
         </FlexContainer>
       </div>

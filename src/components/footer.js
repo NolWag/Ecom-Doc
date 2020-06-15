@@ -7,16 +7,6 @@ import FooterNav from "./_footer-nav"
 import Button from './button'
 import MobileNav from "../components/mobile-nav"
 
-/*
- * This component is built using `gatsby-image` to automatically serve optimized
- * images with lazy loading and reduced file sizes. The image is loaded using a
- * `useStaticQuery`, which allows us to load the image from directly within this
- * component, rather than having to pass the image data down from pages.
- *
- * For more information, see the docs:
- * - `gatsby-image`: https://gatsby.dev/gatsby-image
- * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
- */
 
 const Container = styled('div')`
     min-height: unset;
@@ -33,7 +23,7 @@ const Container = styled('div')`
 const FlexContainer = styled('div')`
     display: flex;
     align-items: center;
-    margin-top: 15vw;
+    margin-top: 20vw;
     margin-left: 8vw;
     z-index: 10;
 
@@ -52,6 +42,7 @@ const GreenText = styled('span')`
 const Headline = styled('h3')`
     font-size: 3vw;
     margin-left: 2rem;
+    font-family: "rubik";
 
     @media (max-width: 800px) {
         font-size: 6vw;
@@ -59,8 +50,6 @@ const Headline = styled('h3')`
         margin-left: 0;
     }
 `
-
-
 
 const Footer = () => {
 

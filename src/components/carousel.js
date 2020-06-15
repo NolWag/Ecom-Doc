@@ -1,6 +1,12 @@
 import React from "react"
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useStaticQuery, graphql } from "gatsby"
+import styled from '@emotion/styled';
+
+import Carousel from "react-multi-carousel";
+import Img from "gatsby-image"
+
+
 
 const responsive = {
     superLargeDesktop: {
@@ -13,24 +19,55 @@ const responsive = {
       items: 3
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1024, min: 600 },
       items: 2
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 600, min: 0 },
       items: 1
     }
   };
 
-const CarouselHome = () => {
-    return (
-        <Carousel responsive={responsive}>
-        <div>Item 1</div>
-        <div>Item 2</div>
-        <div>Item 3</div>
-        <div>Item 4</div>
-        </Carousel>
+  const Item = styled(Img)`
+    margin: 0rem 1rem;
+  `
+  const Headline = styled('h2')`
+  text-align: center;
+  font-size: 2rem;
+  padding: 0 2rem;
+  margin-bottom: 5rem;
 
+  @media (max-width: 600px) {
+    text-align: left;
+    margin-top: 4rem;
+  }
+`
+
+const CarouselHome = () => {
+
+  const { image } = useStaticQuery(graphql`
+  query {
+      image: file(relativePath: { eq: "Wheel-Store.jpg" }) {
+          sharp: childImageSharp {
+              fluid(quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+              }
+          }
+      }
+  }
+`)
+
+
+    return (
+        <div>
+        <Headline>Our Recent Work</Headline>
+        <Carousel responsive={responsive} infinite={true}>
+          <Item fluid={image.sharp.fluid} />
+          <Item fluid={image.sharp.fluid} />
+          <Item fluid={image.sharp.fluid} />
+          <Item fluid={image.sharp.fluid} />
+        </Carousel>
+        </div>
     )
 }
 

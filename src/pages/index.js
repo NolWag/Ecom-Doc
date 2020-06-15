@@ -39,6 +39,8 @@ const BottomLine = styled('svg')`
   position: absolute;
   left: 0;
   z-index: -10;
+  /* if added below, add to footer > FlexContainer > margintop */
+  margin-top: 5vw;
 
 
   @media (max-width: 800px) {
@@ -64,7 +66,10 @@ const IndexPage = () => (
   <HeroContainer>
     <Hero />
   </HeroContainer>  
+  
   <FourUpText />
+
+  <Carousel />
   
   <BottomLine xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1527 599.31"><defs>
   </defs>
@@ -74,7 +79,9 @@ const IndexPage = () => (
       </g>
   </g>
   </BottomLine>
+
     <Footer />
+
   </Layout>
 )
 
