@@ -1,7 +1,7 @@
 import React from "react"
 import InternalNav from "../components/internal-nav"
 import InnerHero from "../components/InnerHero"
-import FooterNav from "../components/footer-nav"
+import MobileNav from "../components/mobile-nav"
 import ContactForm from "../components/contact-form"
 import SEO from "../components/seo"
 
@@ -13,7 +13,7 @@ const ContactPage = () => {
             <InternalNav />
             <InnerHero pageName="Contact" />
             <ContactForm />
-            <FooterNav />
+            <MobileNav />
 
         </div>
     )

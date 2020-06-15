@@ -60,13 +60,14 @@ const GreenText = styled('span')`
 `
 
 const Hero = () => {
+    
 
   return (
       <Container>
       <Headline><GreenText>Shopify</GreenText> development, <br /> repair, and maintenance.</Headline>
       <ButtonGroup>
-            <Button name="FAQs" link="/faqs" />
-          <Button type="primary" name="Get Help Now" link="/contact" />
+        <Button name="FAQs" link="/faqs" />
+          <Button type="primary" name="Services" link="/services" />
       </ButtonGroup>
       </Container>
   )

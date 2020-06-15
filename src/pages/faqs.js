@@ -1,7 +1,7 @@
 import React from "react"
 import InternalNav from "../components/internal-nav"
 import InnerHero from "../components/InnerHero"
-import FooterNav from "../components/footer-nav"
+import MobileNav from "../components/mobile-nav"
 import SEO from "../components/seo"
 
 import { Link } from "gatsby"
@@ -32,7 +32,7 @@ const FAQPage = () => {
                 <h4>Can you make my Shopify store load faster?</h4>
                 <p>Yes, we have optimized hundreds of Shopify stores. </p>
             </Content>
-            <FooterNav />
+            <MobileNav />
         </div>
     )
 

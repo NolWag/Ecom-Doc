@@ -31,8 +31,7 @@ const FlexContainer = styled('div')`
 `
 
 const List = styled('ul')`
-  font-family: 'Montserrat';
-  font-weight: 600;
+  font-family: 'Rubik';
   list-style-type: none;
   display: inline-flex;
 
@@ -44,17 +43,6 @@ const List = styled('ul')`
 const Item = styled(Link)`
     margin: 7vw 2vw;
 `
-
-const ItemLink = styled('a')`
-    margin: 7vw 2vw;
-`
-
-
-const SubMenu = styled('ul')`
-    position: absolute;
-    top: 180px;
-`
-
 
 const Logo = styled(Img)`
   width: 15vw;
@@ -88,10 +76,7 @@ const Nav = () => {
     <FlexContainer>
     <Link to="/"><Logo fluid={image.sharp.fluid} /> </Link>
     <List>
-        <ItemLink href="#services">Services</ItemLink>
-          <SubMenu>
-
-          </SubMenu>
+        <Item to="/services">Services</Item>
         <Item to="/faqs">FAQs</Item>
         <Item to="/blog">Blog</Item>
         <Item to="/contact">Contact</Item>

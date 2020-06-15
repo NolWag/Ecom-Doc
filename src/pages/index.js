@@ -8,9 +8,11 @@ import Hero from "../components/hero"
 import Nav from "../components/nav"
 import FourUpText from "../components/four-up-text"
 import Footer from "../components/footer"
+import Carousel from "../components/carousel"
 
 import Img from "gatsby-image"
 import styled from '@emotion/styled';
+import CarouselHome from "../components/carousel";
 
 const HeroContainer = styled('div')`
   display: flex;
@@ -37,6 +39,8 @@ const BottomLine = styled('svg')`
   position: absolute;
   left: 0;
   z-index: -10;
+  /* if added below, add to footer > FlexContainer > margintop */
+  margin-top: 5vw;
 
 
   @media (max-width: 800px) {
@@ -64,6 +68,8 @@ const IndexPage = () => (
   </HeroContainer>  
   
   <FourUpText />
+
+  <Carousel />
   
   <BottomLine xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1527 599.31"><defs>
   </defs>
@@ -73,7 +79,9 @@ const IndexPage = () => (
       </g>
   </g>
   </BottomLine>
+
     <Footer />
+
   </Layout>
 )
 

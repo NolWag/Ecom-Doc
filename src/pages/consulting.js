@@ -1,7 +1,6 @@
 import React from "react"
 import InternalNav from "../components/internal-nav"
 import InnerHero from "../components/InnerHero"
-import FooterNav from "../components/footer-nav"
 
 const ConsultingPage = () => {
     
@@ -9,7 +8,6 @@ const ConsultingPage = () => {
         <div>
             <InternalNav />
             <InnerHero pageName="Consulting" />
-            <FooterNav />
 
         </div>
     )

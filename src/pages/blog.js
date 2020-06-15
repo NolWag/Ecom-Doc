@@ -6,10 +6,10 @@ import InternalNav from "../components/internal-nav"
 import Button from "../components/button"
 import InnerHero from "../components/InnerHero"
 import SEO from "../components/seo"
+import MobileNav from "../components/mobile-nav"
 
 const PostItem = styled('div')`
     margin: 4rem 30%;
-    border: solid #ef4538 5px;
     padding: 1rem;
     border-radius: 1rem;
 
@@ -51,6 +51,7 @@ function BlogPage({ data }) {
               </Flex>
             </PostItem>
             </Link>
+            <MobileNav />
             </div>
           )
         })}
