@@ -7,7 +7,6 @@ import Carousel from "react-multi-carousel";
 import Img from "gatsby-image"
 
 
-
 const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
