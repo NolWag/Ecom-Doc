@@ -46,35 +46,42 @@ const CarouselHome = () => {
 
   const data = useStaticQuery(graphql`
   query {
-      imageOne: file(relativePath: { eq: "Above-Media.jpg" }) {
+      imageOne: file(relativePath: { eq: "Above-Media-min.jpg" }) {
           sharp: childImageSharp {
               fluid(quality: 100) {
                   ...GatsbyImageSharpFluid_withWebp
               }
           }
       }
-      imageTwo: file(relativePath: { eq: "Wheel-Store.jpg" }) {
+      imageTwo: file(relativePath: { eq: "Wheel-Store-min.jpg" }) {
           sharp: childImageSharp {
               fluid(quality: 100) {
                   ...GatsbyImageSharpFluid_withWebp
               }
           }
       }
-      imageThree: file(relativePath: { eq: "Sutherland.jpg" }) {
+      imageThree: file(relativePath: { eq: "Sutherland-min.jpg" }) {
           sharp: childImageSharp {
               fluid(quality: 100) {
                   ...GatsbyImageSharpFluid_withWebp
               }
           }
       }
-      imageFour: file(relativePath: { eq: "Golf-Carts.jpg" }) {
+      imageFour: file(relativePath: { eq: "Golf-Carts-min.jpg" }) {
           sharp: childImageSharp {
               fluid(quality: 100) {
                   ...GatsbyImageSharpFluid_withWebp
               }
           }
       }
-      imageFive: file(relativePath: { eq: "Fit-Bit.jpg" }) {
+      imageFive: file(relativePath: { eq: "Fit-Bit-min.jpg" }) {
+          sharp: childImageSharp {
+              fluid(quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+              }
+          }
+      }
+      imageSix: file(relativePath: { eq: "TPB-min.jpg" }) {
           sharp: childImageSharp {
               fluid(quality: 100) {
                   ...GatsbyImageSharpFluid_withWebp
@@ -94,6 +101,7 @@ const CarouselHome = () => {
           <Item fluid={data.imageThree.sharp.fluid} />
           <Item fluid={data.imageFour.sharp.fluid} />
           <Item fluid={data.imageFive.sharp.fluid} />
+          <Item fluid={data.imageSix.sharp.fluid} />
         </Carousel>
         </div>
     )
