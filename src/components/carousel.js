@@ -44,9 +44,37 @@ const responsive = {
 
 const CarouselHome = () => {
 
-  const { image } = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
   query {
-      image: file(relativePath: { eq: "Wheel-Store.jpg" }) {
+      imageOne: file(relativePath: { eq: "Above-Media.jpg" }) {
+          sharp: childImageSharp {
+              fluid(quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+              }
+          }
+      }
+      imageTwo: file(relativePath: { eq: "Wheel-Store.jpg" }) {
+          sharp: childImageSharp {
+              fluid(quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+              }
+          }
+      }
+      imageThree: file(relativePath: { eq: "Sutherland.jpg" }) {
+          sharp: childImageSharp {
+              fluid(quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+              }
+          }
+      }
+      imageFour: file(relativePath: { eq: "Golf-Carts.jpg" }) {
+          sharp: childImageSharp {
+              fluid(quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+              }
+          }
+      }
+      imageFive: file(relativePath: { eq: "Fit-Bit.jpg" }) {
           sharp: childImageSharp {
               fluid(quality: 100) {
                   ...GatsbyImageSharpFluid_withWebp
@@ -61,10 +89,11 @@ const CarouselHome = () => {
         <div>
         <Headline>Our Recent Work</Headline>
         <Carousel responsive={responsive} infinite={true}>
-          <Item fluid={image.sharp.fluid} />
-          <Item fluid={image.sharp.fluid} />
-          <Item fluid={image.sharp.fluid} />
-          <Item fluid={image.sharp.fluid} />
+          <Item fluid={data.imageOne.sharp.fluid} />
+          <Item fluid={data.imageTwo.sharp.fluid} />
+          <Item fluid={data.imageThree.sharp.fluid} />
+          <Item fluid={data.imageFour.sharp.fluid} />
+          <Item fluid={data.imageFive.sharp.fluid} />
         </Carousel>
         </div>
     )
