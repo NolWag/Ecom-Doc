@@ -82,7 +82,7 @@ const FourUpText = () => {
           <ContentContainer>
               <h2>Page Speed Optimization</h2>
               <p>
-              Purchase a new theme, but it doesn’t look exactly like it’s supposed to? We’ve installed and set up 100’s of the most popular Shopify themes. Whether it’s the config settings or product variations we can get your Shopify store looking the way you want it to.
+              Is your store loading a little too slow? Optimizations are exactly what the doctor ordered. There are a plethora of things that can make your site slow to load: apps, improper coding, code in the wrong spot, image sizes, third party software, the list goes on and on. This makes each page speed optimization a specialized job for every client and starts with an audit by The Doc. Test your site’s speed today with Google Page Speed Tool or GTmetrix - it’s free!
               </p>
                 <Button type="primary" name="Inquire Now" link="/contact"></Button>
           </ContentContainer>

@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled';
 
 import Header from "../components/internal-nav"
+import MobileNav from "../components/mobile-nav"
 
 const Content = styled('div')`
     margin: 4rem 30%;
@@ -19,6 +20,7 @@ const BlogLayout = ({ children }) => {
         <Content>
         {children}
         </Content>
+        <MobileNav />
         </div>
     )
 }
