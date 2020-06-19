@@ -34,6 +34,7 @@ const List = styled('ul')`
   font-family: 'Rubik';
   list-style-type: none;
   display: inline-flex;
+  margin-right: 50px;
 
   @media (max-width: 800px) {
     display: none;
@@ -57,29 +58,83 @@ const Logo = styled(Img)`
   }
 `
 
+const SocialIcon = styled(Img)`
+  height: 100%;
+  width: 25px;
+  margin: 7vw .25vw;
+`
+
+const SocialContainer = styled('a')`
+  height: 100%;
+`
+
 const Nav = () => {
 
-  const { image } = useStaticQuery(graphql`
-  query {
-      image: file(relativePath: { eq: "Ecom-Doc-Logo-Web.jpg" }) {
-          sharp: childImageSharp {
-              fluid(quality: 100) {
-                  ...GatsbyImageSharpFluid_withWebp
-              }
-          }
-      }
-  }
+const data = useStaticQuery(graphql`
+query {
+    logo: file(relativePath: { eq: "Ecom-Doc-Logo-Web.jpg" }) {
+        sharp: childImageSharp {
+            fluid(quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
+            }
+        }
+    }
+    facebook: file(relativePath: { eq: "Facebook.png" }) {
+        sharp: childImageSharp {
+            fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+            }
+        }
+    }
+    twitter: file(relativePath: { eq: "Twitter.png" }) {
+        sharp: childImageSharp {
+            fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+            }
+        }
+    }
+    youtube: file(relativePath: { eq: "Youtube.png" }) {
+        sharp: childImageSharp {
+            fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+            }
+        }
+    }
+    instagram: file(relativePath: { eq: "Instagram.png" }) {
+        sharp: childImageSharp {
+            fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+            }
+        }
+    }
+}
 `)
+
 
   return (
     <AbsoluteContainer>
     <FlexContainer>
-    <Link to="/"><Logo fluid={image.sharp.fluid} /> </Link>
+    <Link to="/"><Logo fluid={data.logo.sharp.fluid} /> </Link>
     <List>
         <Item to="/services">Services</Item>
         <Item to="/faqs">FAQs</Item>
         <Item to="/blog">Blog</Item>
         <Item to="/contact">Contact</Item>
+        
+        <SocialContainer href="/">
+          <SocialIcon fluid={data.facebook.sharp.fluid} />
+        </SocialContainer>
+        <SocialContainer href="/">
+          <SocialIcon fluid={data.instagram.sharp.fluid} />
+        </SocialContainer>
+        <SocialContainer href="/">
+          <SocialIcon fluid={data.twitter.sharp.fluid} />
+        </SocialContainer>
+        <SocialContainer href="/">
+          <SocialIcon fluid={data.youtube.sharp.fluid} />
+        </SocialContainer>
+
+        
     </List>
     </FlexContainer>
     </AbsoluteContainer>

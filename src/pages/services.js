@@ -1,9 +1,11 @@
 import React from "react"
-import InternalNav from "../components/internal-nav"
 import InnerHero from "../components/InnerHero"
 import SEO from "../components/seo"
 import Button from "../components/button"
 import MobileNav from "../components/mobile-nav"
+
+import Nav from "../components/nav"
+import NavContainer from "../components/util/nav-container"
 
 import { Link } from "gatsby"
 import styled from '@emotion/styled-base';
@@ -33,7 +35,9 @@ const ServicesPage = () => {
     return (
         <div>
             <SEO title="Services" />
-            <InternalNav />
+            <NavContainer>
+                <Nav />
+            </NavContainer>
             <InnerHero pageName="Services" />
             <Content>
 

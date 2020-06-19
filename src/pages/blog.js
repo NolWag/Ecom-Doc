@@ -2,11 +2,13 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import styled from '@emotion/styled';
 
-import InternalNav from "../components/internal-nav"
 import Button from "../components/button"
 import InnerHero from "../components/InnerHero"
 import SEO from "../components/seo"
 import MobileNav from "../components/mobile-nav"
+
+import Nav from "../components/nav"
+import NavContainer from "../components/util/nav-container"
 
 const PostItem = styled('div')`
     margin: 4rem 30%;
@@ -17,10 +19,6 @@ const PostItem = styled('div')`
        margin: 4rem 1rem;
    }
 
-`
-const Title = styled('h2')`
-`
-const Header = styled('div')`
 `
 
 const Flex = styled('div')`
@@ -37,13 +35,15 @@ function BlogPage({ data }) {
           return (
             <div>
             <SEO title="Blog" />
-            <InternalNav />
+            <NavContainer>
+              <Nav />
+            </NavContainer>
             <InnerHero pageName="Blog" />
             <Link to={node.fields.slug}>
             <PostItem key={node.id}>
-              <Header>
-                <Title>{title}</Title>
-              </Header>
+              <div>
+                <h2>{title}</h2>
+              </div>
               <p>{node.excerpt}</p>
               <Flex>
               <div>Posted By {author}</div>
