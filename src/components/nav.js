@@ -42,7 +42,7 @@ const List = styled('ul')`
 `
 
 const Item = styled(Link)`
-    margin: 7vw 2vw;
+    margin: 7vw 1vw;
 `
 
 const Logo = styled(Img)`
@@ -120,7 +120,7 @@ query {
         <Item to="/faqs">FAQs</Item>
         <Item to="/blog">Blog</Item>
         <Item to="/contact">Contact</Item>
-        
+
         <SocialContainer href="/">
           <SocialIcon fluid={data.facebook.sharp.fluid} />
         </SocialContainer>

@@ -33,7 +33,6 @@ const List = styled('ul')`
     margin: 0;
     margin-bottom: .8rem;
     margin-top: 1rem;
-    justify-content: center;
     display: flex;
     list-style-type: none;
     flex-direction: column;
@@ -75,8 +74,8 @@ const SocialIcon = styled(Img)`
   margin: 0 .25vw;
 
   @media (max-width: 800px) {
-    margin: 2vw 3vw 0 3vw;
-    width: 50px;
+    margin: 2vw .25vw 0 .25vw;
+    width: 40px;
   }
 `
 
@@ -87,6 +86,12 @@ const SocialContainer = styled('a')`
 const Flex = styled('div')`
   display: flex;
 `
+
+const Divider = styled('hr')`
+  color: #fff;
+`
+
+
 const FooterNav = () => {
 
   const data = useStaticQuery(graphql`
