@@ -1,8 +1,10 @@
 import React from "react"
-import InternalNav from "../components/internal-nav"
 import InnerHero from "../components/InnerHero"
 import MobileNav from "../components/mobile-nav"
 import SEO from "../components/seo"
+
+import Nav from "../components/nav"
+import NavContainer from "../components/util/nav-container"
 
 import { Link } from "gatsby"
 import styled from '@emotion/styled-base';
@@ -20,11 +22,13 @@ const FAQPage = () => {
     return (
         <div>
             <SEO title="Frequently Asked Questions" />
-            <InternalNav />
+            <NavContainer>
+            <Nav />
+            </NavContainer>
             <InnerHero pageName="FAQs" />
             <Content>
                 <h4>What is your hourly rate?</h4>
-                <p>For changes, edits and custom development we charge $50/hour, discount rates are available for larger projects or monthly maintenance plans.</p>
+                <p>For changes, edits and custom development we charge $65/hour, discount rates are available for larger projects or monthly maintenance plans.</p>
                 <h4>Can you help us with our WooCommerce, BigCommerce or Magento shopping cart?</h4>
                 <p>No, we only work with Shopify Stores.</p>
                 <h4>Do you build / develop new Shopify stores?</h4>

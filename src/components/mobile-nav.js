@@ -30,11 +30,13 @@ const List = styled('ul')`
   display: none;
 
   @media (max-width: 800px) {
+    margin: 0;
     margin-bottom: .8rem;
     margin-top: 1rem;
-    justify-content: center;
     display: flex;
     list-style-type: none;
+    flex-direction: column;
+    align-items: center;
   }
 `
 
@@ -66,7 +68,64 @@ const DeskNav = styled('ul')`
   }
 `
 
+const SocialIcon = styled(Img)`
+  height: 100%;
+  width: 25px;
+  margin: 0 .25vw;
+
+  @media (max-width: 800px) {
+    margin: 2vw .25vw 0 .25vw;
+    width: 40px;
+  }
+`
+
+const SocialContainer = styled('a')`
+  height: 100%;
+`
+
+const Flex = styled('div')`
+  display: flex;
+`
+
+const Divider = styled('hr')`
+  color: #fff;
+`
+
+
 const FooterNav = () => {
+
+  const data = useStaticQuery(graphql`
+query {
+    facebook: file(relativePath: { eq: "Facebook.png" }) {
+        sharp: childImageSharp {
+            fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+            }
+        }
+    }
+    twitter: file(relativePath: { eq: "Twitter.png" }) {
+        sharp: childImageSharp {
+            fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+            }
+        }
+    }
+    youtube: file(relativePath: { eq: "Youtube.png" }) {
+        sharp: childImageSharp {
+            fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+            }
+        }
+    }
+    instagram: file(relativePath: { eq: "Instagram.png" }) {
+        sharp: childImageSharp {
+            fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+            }
+        }
+    }
+}
+`)
 
   return (
     <FixedContainer>
@@ -75,11 +134,40 @@ const FooterNav = () => {
             <Item to="/faqs">FAQs</Item>
             <Item to="/blog">Blog</Item>
             <Item to="/contact">Contact</Item>
+            <SocialContainer href="/">
+              <SocialIcon fluid={data.facebook.sharp.fluid} />
+            </SocialContainer>
+            <SocialContainer href="/">
+              <SocialIcon fluid={data.instagram.sharp.fluid} />
+            </SocialContainer>
+            <SocialContainer href="/">
+              <SocialIcon fluid={data.twitter.sharp.fluid} />
+            </SocialContainer>
+            <SocialContainer href="/">
+              <SocialIcon fluid={data.youtube.sharp.fluid} />
+            </SocialContainer>
         </DeskNav>
         <List>
+          <div>
             <Item to="/services">Services</Item>
             <Item to="/faqs">FAQs</Item>
             <Item to="/contact">Contact</Item>
+            <Item to="/blog">Blog</Item>
+          </div>
+          <Flex>
+            <SocialContainer href="/">
+              <SocialIcon fluid={data.facebook.sharp.fluid} />
+            </SocialContainer>
+            <SocialContainer href="/">
+              <SocialIcon fluid={data.instagram.sharp.fluid} />
+            </SocialContainer>
+            <SocialContainer href="/">
+              <SocialIcon fluid={data.twitter.sharp.fluid} />
+            </SocialContainer>
+            <SocialContainer href="/">
+              <SocialIcon fluid={data.youtube.sharp.fluid} />
+            </SocialContainer>
+          </Flex>
         </List>
     
     </FixedContainer>
