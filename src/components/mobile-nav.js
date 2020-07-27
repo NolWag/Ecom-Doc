@@ -35,8 +35,8 @@ const List = styled('ul')`
     margin-top: 1rem;
     display: flex;
     list-style-type: none;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 `
 
@@ -74,8 +74,8 @@ const SocialIcon = styled(Img)`
   margin: 0 .25vw;
 
   @media (max-width: 800px) {
-    margin: 2vw .25vw 0 .25vw;
-    width: 40px;
+    margin: 0 .5vw 0 .5vw;
+    width: 20px;
   }
 `
 
@@ -134,18 +134,13 @@ query {
             <Item to="/faqs">FAQs</Item>
             <Item to="/blog">Blog</Item>
             <Item to="/contact">Contact</Item>
-            <SocialContainer href="/">
+            <SocialContainer target="_blank" href="https://www.facebook.com/The-Ecom-Doc-318549699040501">
               <SocialIcon fluid={data.facebook.sharp.fluid} />
             </SocialContainer>
             <SocialContainer href="/">
               <SocialIcon fluid={data.instagram.sharp.fluid} />
             </SocialContainer>
-            <SocialContainer href="/">
-              <SocialIcon fluid={data.twitter.sharp.fluid} />
-            </SocialContainer>
-            <SocialContainer href="/">
-              <SocialIcon fluid={data.youtube.sharp.fluid} />
-            </SocialContainer>
+           
         </DeskNav>
         <List>
           <div>
@@ -155,17 +150,11 @@ query {
             <Item to="/blog">Blog</Item>
           </div>
           <Flex>
-            <SocialContainer href="/">
+            <SocialContainer target="_blank" href="https://www.facebook.com/The-Ecom-Doc-318549699040501">
               <SocialIcon fluid={data.facebook.sharp.fluid} />
             </SocialContainer>
             <SocialContainer href="/">
               <SocialIcon fluid={data.instagram.sharp.fluid} />
-            </SocialContainer>
-            <SocialContainer href="/">
-              <SocialIcon fluid={data.twitter.sharp.fluid} />
-            </SocialContainer>
-            <SocialContainer href="/">
-              <SocialIcon fluid={data.youtube.sharp.fluid} />
             </SocialContainer>
           </Flex>
         </List>

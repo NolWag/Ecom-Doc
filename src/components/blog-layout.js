@@ -8,7 +8,7 @@ const Content = styled('div')`
     margin: 4rem 30%;
     
     @media (max-width: 800px) {
-       margin: 4rem 1rem;
+       margin: 6rem 1rem;
    }
 `
 

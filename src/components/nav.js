@@ -50,7 +50,7 @@ const Logo = styled(Img)`
   margin: 2rem;
 
   @media (max-width: 800px) {
-    width: 80vw;
+    width: 50vw;
     align-self: center;
     z-index: 10;
     margin: 0;
@@ -121,20 +121,12 @@ query {
         <Item to="/blog">Blog</Item>
         <Item to="/contact">Contact</Item>
 
-        <SocialContainer href="/">
+        <SocialContainer target="_blank" href="https://www.facebook.com/The-Ecom-Doc-318549699040501">
           <SocialIcon fluid={data.facebook.sharp.fluid} />
         </SocialContainer>
         <SocialContainer href="/">
           <SocialIcon fluid={data.instagram.sharp.fluid} />
-        </SocialContainer>
-        <SocialContainer href="/">
-          <SocialIcon fluid={data.twitter.sharp.fluid} />
-        </SocialContainer>
-        <SocialContainer href="/">
-          <SocialIcon fluid={data.youtube.sharp.fluid} />
-        </SocialContainer>
-
-        
+        </SocialContainer>       
     </List>
     </FlexContainer>
     </AbsoluteContainer>

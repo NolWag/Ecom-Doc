@@ -31,7 +31,11 @@ const Container = styled('div')`
         margin-left: 0;
         display: flex;
         flex-direction: column;
-  }
+        margin-top: 100px;
+    }
+    @media (max-width: 500px) {
+        margin-top: 0;
+    }  
 
 `
 
@@ -64,7 +68,7 @@ const Hero = () => {
 
   return (
       <Container>
-      <Headline><GreenText>Shopify</GreenText> development, <br /> repair, and maintenance.</Headline>
+      <Headline><GreenText>Shopify</GreenText> development, <br /> optimization, and <br/> maintenance service.</Headline>
       <ButtonGroup>
         <Button name="FAQs" link="/faqs" />
           <Button type="primary" name="Services" link="/services" />
