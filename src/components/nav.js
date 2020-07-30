@@ -135,5 +135,3 @@ query {
 
 export default Nav
 
-
-
