@@ -6614,6 +6614,11 @@ gatsby-plugin-emotion@^4.3.1:
     "@babel/runtime" "^7.9.6"
     "@emotion/babel-preset-css-prop" "^10.0.27"
 
+gatsby-plugin-facebook-pixel@^1.0.3:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-facebook-pixel/-/gatsby-plugin-facebook-pixel-1.0.8.tgz#8f5aa6816ddf1cf451c372464fa3f873d7dae288"
+  integrity sha512-oJfTMJxAv5AF2sganhtaq3+6GZ2W2s6/RjQxVsRUxUWMxhrtW6YeMsayAh1bVPgVQ8boJ0QyftipXe7fyq4BCA==
+
 gatsby-plugin-google-fonts@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-fonts/-/gatsby-plugin-google-fonts-1.0.1.tgz#d71054f7bf207b9a8da227380369e18e6f4e0201"
@@ -9768,8 +9773,9 @@ mkdirp@^1.0.3:
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
 
 moment@^2.25.3:
-  version "2.25.3"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.25.3.tgz#252ff41319cf41e47761a1a88cab30edfe9808c0"
+  version "2.29.2"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.2.tgz#00910c60b20843bcba52d37d58c628b47b1f20e4"
+  integrity sha512-UgzG4rvxYpN15jgCmVJwac49h9ly9NurikMWGPdVxm8GZD6XjkKPxDTjQQ43gtGgnV3X0cAyWDdP2Wexoquifg==
 
 move-concurrently@^1.0.1:
   version "1.0.1"
